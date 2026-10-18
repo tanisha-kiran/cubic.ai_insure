@@ -1,0 +1,21 @@
+# Local runtime, user data and secrets. Never publish these.
+data/
+insurance_data/
+logs/
+uploaded_pdfs/
+uploaded_audio/
+documents/
+ocr_cache/
+qdrant_local_storage/
+
+# Local Python runtimes, caches and model artifacts.
+docvqa_env/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.gguf
+
+# Editor and operating-system files.
+.DS_Store
+Thumbs.db

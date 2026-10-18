@@ -1,0 +1,36 @@
+# Runtime dependencies of the offline demo, pinned to the versions this project was built and tested with
+# (Python 3.12, Windows 11). Everything else the app needs is pulled in as a dependency of these.
+# requirements.lock.txt is the full `pip freeze` of the working environment, for exact reproduction.
+#
+# Install on a machine with NO internet (after running build_offline_bundle.ps1 on a connected one):
+#   pip install --no-index --find-links wheels -r requirements.txt
+
+# --- web server
+fastapi==0.141.1
+starlette==1.6.0
+uvicorn==0.53.0
+python-multipart==0.0.32
+itsdangerous==2.2.0
+cryptography==50.0.2
+
+# --- agent graph + model serving client
+langgraph==1.2.12
+requests==2.34.2
+
+# --- retrieval (embedded Qdrant + local embedding model)
+qdrant-client==1.19.1
+sentence-transformers==5.7.0
+torch==2.14.0
+transformers==4.57.6
+numpy==1.26.4
+
+# --- speech to text (voice recorder + audio files), fully local
+faster-whisper==1.2.1
+
+# --- document readers
+pymupdf==1.28.2
+pillow==12.3.0
+python-docx==1.2.0
+openpyxl==3.1.5
+python-pptx==1.0.2
+beautifulsoup4==4.15.0
